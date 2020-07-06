@@ -1,0 +1,71 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+      #all_checkbox {
+          margin: 0 0 10px 0;
+          background: skyblue;
+      }
+
+      #message {
+          color: red;
+          display: none;
+      }
+  </style>
+</head>
+<body>
+    <div id="all_checkbox">
+      <label for="allcheck"><input type="checkbox" id="allcheck">まとめてチェック</label>
+    </div>
+    <div id="form_group">
+        <div class="form_checkbox">
+          <label for="check1"><input type="checkbox" id="check1">チェックボックス1</label>
+        </div>
+        <div class="form_checkbox">
+          <label for="check2"><input type="checkbox" id="check2">チェックボックス2</label>
+        </div>
+        <div class="form_checkbox">
+          <label for="check3"><input type="checkbox" id="check3">チェックボックス3</label>
+        </div>
+        <div class="form_checkbox">
+          <label for="check4"><input type="checkbox" id="check4">チェックボックス4</label>
+        </div>
+        <div class="form_checkbox">
+          <label for="check5"><input type="checkbox" id="check5">チェックボックス5</label>
+        </div>
+    </div>
+    <p id="message">すべてチェックされました！</p>
+
+    <script type="text/javascript">
+    $(function() {
+        let all = $('#all_checkbox').find('input');
+        let item = $('#form_group').find('input');
+        let message = $('#message');
+
+        //まとめてチェックする
+        all.on('click',function(){
+            //全てにチェックを入れるをクリック
+            if($(this).prop('checked')) {
+                item.prop('checked', true);
+                message.css('display','block');
+            } else {
+                item.prop('checked', false);
+                message.css('display','none');
+            }
+        });
+
+        //個別のチェックをクリックしたら、まとめてチェックのチェックの状態を変更する
+        item.on('click',function(){
+            if($("#form_group input[type=checkbox]:not(:checked)").length == 0 ) {
+                // 全てチェック
+                all.prop('checked', true);
+                message.css('display','block');
+            } else {
+                all.prop('checked', false);
+                message.css('display','none');
+            }
+        });
+    });
+  </script>
+</body>
+</html>

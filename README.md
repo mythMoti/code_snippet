@@ -5,5 +5,8 @@
 http://premiumsoftware.net/cleditor/
 の導入テスト
 
-## テスト
-あああ
+## text_count
+表示する文字数を制限。…の省略する形でテキストを出力。
+
+## all_check
+まとめてチェックのついたチェックリスト
