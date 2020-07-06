@@ -29,13 +29,13 @@
   <script>
       //複数要素にたいしての文字数制限１
       $(function(){
-          var setElm = $('#news_one a'); // 対象
-          var cutFigure = '30'; // 何文字でカットするか
-          var afterTxt = '…'; // 文字カットした後ろに表示するテキスト
+          let setElm = $('#news_one a'); // 対象
+          let cutFigure = '30'; // 何文字でカットするか
+          let afterTxt = '…'; // 文字カットした後ろに表示するテキスト
 
           setElm.each(function(){
-              var textLength = $(this).text().length; //文字数確認
-              var textTrim = $(this).text().substring(0,(cutFigure)); //cutFigureで指定した範囲の文字を返す
+              let textLength = $(this).text().length; //文字数確認
+              let textTrim = $(this).text().substring(0,(cutFigure)); //cutFigureで指定した範囲の文字を返す
 
               if(cutFigure < textLength) {
                 // 文字数が指定より多かったら、返した文字と省略した後ろにテキストを追加
@@ -51,14 +51,14 @@
   <script>
       //複数要素にたいしての文字数制限2
       $(function(){
-          var setElm = $('#news a'); //対象
-          var cutFigure = '50'; // 何文字でカットするか
-          var afterTxt = '…'; // 文字カットした後ろに表示するテキスト
+          let setElm = $('#news a'); //対象
+          let cutFigure = '50'; // 何文字でカットするか
+          let afterTxt = '…'; // 文字カットした後ろに表示するテキスト
 
           function textCut() {
               setElm.each(function(){
-                  var textLength = $(this).text().length; //文字数確認
-                  var textTrim = $(this).text().substring(0,(cutFigure)); //cutFigureで指定した範囲の文字を返す
+                  let textLength = $(this).text().length; //文字数確認
+                  let textTrim = $(this).text().substring(0,(cutFigure)); //cutFigureで指定した範囲の文字を返す
 
                   if(cutFigure < textLength) {
                       // 文字数が指定より多かったら、返した文字と省略した後ろにテキストを追加
