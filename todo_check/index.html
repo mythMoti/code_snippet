@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+        .allcheck {
+            background: red;
+        }
+
+        .todo_group_box {
+            border: 1px solid #000;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>チェックボックスが全てチェックされていたらタイトル色が変わる</h1>
+    <div class="todo_group_box">
+        <h2 class="tit">最初から色がかわる</h2>
+        <div class='item_contents'>
+            <label for="check1"><input type="checkbox" id="check1" checked>チェック1</label>
+            <label for="check2"><input type="checkbox" id="check2" checked>チェック2</label>
+            <label for="check3"><input type="checkbox" id="check3" checked>チェック3</label>
+            <label for="check4"><input type="checkbox" id="check4" checked>チェック4</label>
+        </div>
+    </div>
+
+    <div class="todo_group_box">
+        <h2 class="tit">色がかわらない</h2>
+        <div class='item_contents'>
+            <label for="check9"><input type="checkbox" id="check9" checked>チェック9</label>
+            <label for="check10"><input type="checkbox" id="check10" checked>チェック10</label>
+            <label for="check11"><input type="checkbox" id="check11">チェック11</label>
+            <label for="check12"><input type="checkbox" id="check12">チェック12</label>
+        </div>
+    </div>
+
+    <script>
+        //すべてチェックを入れると色を変える
+        $('.todo_group_box').each(function(){
+            //.todo_group_boxを$containerにする
+            var $container = $(this);
+            //チェックがすべて入っていた場合
+            if($container.find(".item_contents input[type=checkbox]:not(:checked)").length == 0) {
+                //タイトルの背景色をつける
+                $(this).find('.tit').addClass('allcheck');
+            };
+        });
+
+        //各ToDoのチェックが全てついている場合の処理
+        $('.todo_group_box input').on('click',function(){
+            //ページ読み込み時の、各ToDoのチェックが完了してた場合の処理
+            if($(this).closest('.item_contents').find('input[type=checkbox]:not(:checked)').length == 0) {
+                //タイトルの背景色をつける
+                $(this).closest('.item_contents').prev('.tit').addClass('allcheck');
+            } else {
+                $(this).closest('.item_contents').prev('.tit').removeClass('allcheck');
+            };
+        });
+    </script>
+</body>
+</html>
