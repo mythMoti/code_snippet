@@ -3,5 +3,5 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <?php include '_menu.php'; ?>
+    <?php include_once '_menu.php'; ?>
 </body>

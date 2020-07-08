@@ -1,7 +1,8 @@
-# includeで共通headerを使うときに、URLごとに表示を調整する場合の分岐
+# includeで共通headerを使うときに、表示を調整する場合の分岐
 
 ## 概要
--　
+- menu.phpを後で変更する必要がないパターン
+- includeする前に、どこのメニューをactiveにするのか変数に持たせる
 
 ## 作業メモ
 - srtpos参考

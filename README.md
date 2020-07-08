@@ -23,4 +23,9 @@ http://premiumsoftware.net/cleditor/
 phpでの文字数カウント、省略表現
 
 ## active_menu_php
-includeで共通headerを使うときに、URLごとに表示を調整する場合の分岐
+includeで共通headerを使うときに、URLごとに表示を調整する場合の分岐。
+メニューが増えたら、if文に条件を||で追加する必要がある。
+
+## active_menu_flag_php
+includeで共通headerを使うときに、URLごとに表示を調整する場合の分岐。
+メニューが増えて場合にも修正を最低限にできる形。
