@@ -21,3 +21,6 @@ http://premiumsoftware.net/cleditor/
 
 ## text_count_php
 phpでの文字数カウント、省略表現
+
+## active_menu_php
+includeで共通headerを使うときに、URLごとに表示を調整する場合の分岐
