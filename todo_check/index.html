@@ -39,7 +39,7 @@
         //すべてチェックを入れると色を変える
         $('.todo_group_box').each(function(){
             //.todo_group_boxを$containerにする
-            var $container = $(this);
+            let $container = $(this);
             //チェックがすべて入っていた場合
             if($container.find(".item_contents input[type=checkbox]:not(:checked)").length == 0) {
                 //タイトルの背景色をつける
@@ -57,6 +57,12 @@
                 $(this).closest('.item_contents').prev('.tit').removeClass('allcheck');
             };
         });
+
+        //ページ読み込み時点でbodyを透明度0にする
+        $("body").css({opacity:'0'});
+        setTimeout(function(){
+            $("body").stop().animate({opacity:'1'},1000);
+        },200);
     </script>
 </body>
 </html>
