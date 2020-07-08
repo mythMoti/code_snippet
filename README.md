@@ -14,3 +14,6 @@ http://premiumsoftware.net/cleditor/
 ## todo_check
 チェックボックスにチェックをいれたら、タイトルのcssを変更させる。
 ページ読み込み時点でbodyを透明度0にする。
+
+## static_menu
+固定メニュー。スクロールしたら追随するメニュー。
