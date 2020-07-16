@@ -1,7 +1,7 @@
 # 概要
 過去使ったコードで残しておきたいもののメモや、テストで作ったもの仮置き場。
 
-## cl_editor
+## 【WIP】cl_editor
 http://premiumsoftware.net/cleditor/
 の導入テスト
 
@@ -17,7 +17,6 @@ http://premiumsoftware.net/cleditor/
 
 ## static_menu
 固定メニュー。スクロールしたら追随するメニュー。
-
 
 ## text_count_php
 phpでの文字数カウント、省略表現
